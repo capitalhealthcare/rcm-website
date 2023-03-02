@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import AppointmentPopup from "../src/components/AppointmentPopup";
 import Counter from "../src/components/Counter";
@@ -7,7 +8,6 @@ import Layouts from "../src/layouts/Layouts";
 import { testimonialOne } from "../src/sliderProps";
 
 const Index = () => {
-
   const [showPopup, setShowPopup] = useState(false);
 
   const handlePopupClose = () => {
@@ -21,17 +21,14 @@ const Index = () => {
   return (
     <Layouts position={"absolute"}>
       <>
-
-      <div>
-      {/* <button onClick={() => setShowPopup(true)}>Show Popup</button> */}
-      {/* <AppointmentPopup
+        <div>
+          {/* <button onClick={() => setShowPopup(true)}>Show Popup</button> */}
+          {/* <AppointmentPopup
         message="This is a sample popup message"
         isActive={showPopup}
         onClose={handlePopupClose}
       /> */}
-    </div>
-
-
+        </div>
 
         {/*====== Hero Area Start ======*/}
         <section className="hero-area-one">
@@ -73,7 +70,8 @@ const Index = () => {
                 <div className="section-heading heading-white text-center mb-40">
                   <span className="tagline">Why Choose Us</span>
                   <h2 className="title">
-                  Maximizing your revenue, streamlining your billing – My Medical Billing RCM
+                    Maximizing your revenue, streamlining your billing – My
+                    Medical Billing RCM
                   </h2>
                 </div>
               </div>
@@ -90,7 +88,12 @@ const Index = () => {
                     </Link>
                   </h4>
                   <div className="image">
-                    <img src="assets/img/img-title-box/01.jpg" alt="Image" />
+                    <Image
+                      width="370"
+                      height="270"
+                      src="/assets/img/img-title-box/01.jpg"
+                      alt="Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -105,7 +108,12 @@ const Index = () => {
                     </Link>
                   </h4>
                   <div className="image">
-                    <img src="assets/img/img-title-box/02.jpg" alt="Image" />
+                    <Image
+                      width="370"
+                      height="270"
+                      src="/assets/img/img-title-box/02.jpg"
+                      alt="Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -120,7 +128,12 @@ const Index = () => {
                     </Link>
                   </h4>
                   <div className="image">
-                    <img src="assets/img/img-title-box/03.jpg" alt="Image" />
+                    <Image
+                      width="370"
+                      height="270"
+                      src="/assets/img/img-title-box/03.jpg"
+                      alt="Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -140,8 +153,10 @@ const Index = () => {
                         className="single-img wow fadeInLeft"
                         data-wow-delay="0.3s"
                       >
-                        <img
-                          src="assets/img/circle-image-gallery/01.jpg"
+                        <Image
+                          width="270"
+                          height="270"
+                          src="/assets/img/circle-image-gallery/01.jpg"
                           alt=""
                         />
                       </div>
@@ -149,8 +164,10 @@ const Index = () => {
                         className="single-img wow fadeInRight"
                         data-wow-delay="0.4s"
                       >
-                        <img
-                          src="assets/img/circle-image-gallery/04.jpg"
+                        <Image
+                          width="270"
+                          height="300"
+                          src="/assets/img/circle-image-gallery/04.jpg"
                           alt=""
                         />
                       </div>
@@ -160,9 +177,11 @@ const Index = () => {
                         className="single-img wow fadeInLeft"
                         data-wow-delay="0.5s"
                       >
-                        <img
+                        <Image
+                          width="270"
+                          height="300"
                           className="animate-float-bob-y"
-                          src="assets/img/circle-image-gallery/03.jpg"
+                          src="/assets/img/circle-image-gallery/03.jpg"
                           alt=""
                         />
                       </div>
@@ -170,8 +189,10 @@ const Index = () => {
                         className="single-img wow fadeInRight"
                         data-wow-delay="0.6s"
                       >
-                        <img
-                          src="assets/img/circle-image-gallery/02.jpg"
+                        <Image
+                          width="270"
+                          height="270"
+                          src="/assets/img/circle-image-gallery/02.jpg"
                           alt=""
                         />
                       </div>
@@ -183,9 +204,7 @@ const Index = () => {
                 <div className="about-text">
                   <div className="section-heading mb-35">
                     <span className="tagline">About </span>
-                    <h2 className="title">
-                      What We Offer
-                    </h2>
+                    <h2 className="title">What We Offer</h2>
                     <p>25 Years Of Experience in Medical Services</p>
                   </div>
                   <p>
@@ -207,8 +226,153 @@ const Index = () => {
           </div>
         </section>
         {/*====== About Section End ======*/}
+
+        {/*====== Feature Section Start ======*/}
+        <section className="feature-section section-gap bg-color-grey">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <div className="section-heading text-center mb-40">
+                  <span className="tagline">Popular Medical Services</span>
+                  <h2 className="title">
+                    Explore Our Comprehensive Range of Services
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div className="row justify-content-center service-looop">
+              <div className="col-lg-4 col-md-6 col-sm-10">
+                <div
+                  className="iconic-box-two mt-30 wow fadeInUp"
+                  data-wow-delay="0.3s"
+                >
+                  <div className="icon">
+                    <i className="flaticon-tooth-1" />
+                  </div>
+                  <h4 className="title">
+                    <Link href="/service-details">
+                      Patient Appointment and Registration
+                    </Link>
+                  </h4>
+                  <p>Perspiciatis unde omniste natus error volutatem</p>
+                  <Link href="/service-details">
+                    <a className="box-link">
+                      <i className="far fa-plus" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 col-sm-10">
+                <div
+                  className="iconic-box-two mt-30 wow fadeInUp"
+                  data-wow-delay="0.4s"
+                >
+                  <div className="icon">
+                    <i className="flaticon-tooth-2" />
+                  </div>
+                  <h4 className="title">
+                    <Link href="/service-details">
+                      Patient Eligibility and Benefits
+                    </Link>
+                  </h4>
+                  <p>Perspiciatis unde omniste natus error volutatem</p>
+                  <Link href="/service-details">
+                    <a className="box-link">
+                      <i className="far fa-plus" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 col-sm-10">
+                <div
+                  className="iconic-box-two mt-30 wow fadeInUp"
+                  data-wow-delay="0.5s"
+                >
+                  <div className="icon">
+                    <i className="flaticon-tooth-3" />
+                  </div>
+                  <h4 className="title">
+                    <Link href="/service-details">
+                      Billing And Claim Submission
+                    </Link>
+                  </h4>
+                  <p>Perspiciatis unde omniste natus error volutatem</p>
+                  <Link href="/service-details">
+                    <a className="box-link">
+                      <i className="far fa-plus" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 col-sm-10">
+                <div
+                  className="iconic-box-two mt-30 wow fadeInUp"
+                  data-wow-delay="0.6s"
+                >
+                  <div className="icon">
+                    <i className="flaticon-tooth-4" />
+                  </div>
+                  <h4 className="title">
+                    <Link href="/service-details">Charge Capture</Link>
+                  </h4>
+                  <p>Perspiciatis unde omniste natus error volutatem</p>
+                  <Link href="/service-details">
+                    <a className="box-link">
+                      <i className="far fa-plus" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 col-sm-10">
+                <div
+                  className="iconic-box-two mt-30 wow fadeInUp"
+                  data-wow-delay="0.6s"
+                >
+                  <div className="icon">
+                    <i className="flaticon-tooth-4" />
+                  </div>
+                  <h4 className="title">
+                    <Link href="/service-details">Medical Coding</Link>
+                  </h4>
+                  <p>Perspiciatis unde omniste natus error volutatem</p>
+                  <Link href="/service-details">
+                    <a className="box-link">
+                      <i className="far fa-plus" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 col-sm-10">
+                <div
+                  className="iconic-box-two mt-30 wow fadeInUp"
+                  data-wow-delay="0.6s"
+                >
+                  <div className="icon">
+                    <i className="flaticon-tooth-4" />
+                  </div>
+                  <h4 className="title">
+                    <Link href="/service-details">Provider Credentials</Link>
+                  </h4>
+                  <p>Perspiciatis unde omniste natus error volutatem</p>
+                  <Link href="/service-details">
+                    <a className="box-link">
+                      <i className="far fa-plus" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <a class="template-btn mt-40" href="/about">
+                Explore More <i class="far fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+        {/*====== Feature Section End ======*/}
+
         {/*====== Service Section Start ======*/}
-        <section className="service-section bg-color-grey section-gap">
+        {/* <section className="service-section bg-color-grey section-gap">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-7 col-lg-8">
@@ -393,18 +557,51 @@ const Index = () => {
             </div>
             <div style={{textAlign:"center"}}><a class="template-btn mt-40" href="/about">Explore More <i class="far fa-plus"></i></a></div>
           </div>
-        </section>
+        </section> */}
         {/*====== Service Section End ======*/}
-        {/*====== Big Tagline Start ======*/}
-        <section className="big-tagline">
-          <div className="container-fluid">
-            <h2 className="tagline">
-              Learn better health outcomes, improve costs and increase
-              productivity for your business
-            </h2>
+        {/*====== Call to Action Start ======*/}
+        <section
+          className="cta-section bg-size-cover section-gap-100 bg-color-primary blend-mode-multiply"
+          style={{
+            backgroundImage: "url(assets/img/cta-img/cta-section-bg.jpg)",
+          }}
+        >
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-5">
+                <div className="section-heading heading-white">
+                  <span className="tagline">Get Free Consultations</span>
+                  <h2 className="title">
+                    Looking a Doctors to Get Your Services
+                  </h2>
+                </div>
+              </div>
+              <div className="col-lg-7">
+                <ul className="cta-buttons d-sm-flex justify-content-lg-end mt-md-40 flex-wrap">
+                  <li className="mb-3 mb-sm-0">
+                    <a
+                      href="#"
+                      className="template-btn template-btn-white wow fadeInRight"
+                      data-wow-delay="0.4s"
+                    >
+                      Get Free Quote <i className="far fa-plus" />
+                    </a>
+                  </li>
+                  <li className="ml-sm-2">
+                    <a
+                      href="#"
+                      className="template-btn template-btn-bordered wow fadeInRight"
+                      data-wow-delay="0.5s"
+                    >
+                      Get Appointment <i className="far fa-plus" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
-        {/*====== Big Tagline End ======*/}
+        {/*====== Call to Action End ======*/}
         {/*====== Doctor Section Start ======*/}
         {/* <section className="doctors-section section-gap">
           <div className="container">
@@ -592,77 +789,79 @@ const Index = () => {
         </section> */}
         {/*====== Doctor Section End ======*/}
         {/*====== Appointment Section Start ======*/}
- 
+
         <section className="appointment-section section-gap">
-        <div className="container container-1500">
-          <div className="appointment-form-two style-two">
-            <div
-              className="appointment-image"
-              style={{ backgroundImage: "url(assets/img/appointment/03.jpg)" }}
-            ></div>
-            <div className="form-wrap">
-              <div className="section-heading mb-50">
-                <span className="tagline">Make an Appointment</span>
-                <h2 className="title">
-                  Fill-up The From to Get Our Medical Services{" "}
-                </h2>
-              </div>
-              <form onSubmit={(e) => e.preventDefault()} action="#">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="input-field">
-                      <input type="text" placeholder="Your Full Name" />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="input-field">
-                      <input type="email" placeholder="Email Address" />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="input-field">
-                      <select>
-                        <option value="1" selected disabled>
-                          Choose Doctors
-                        </option>
-                        <option value="2">Doctor One</option>
-                        <option value="3">Doctor Two</option>
-                        <option value="4">Doctor Three</option>
-                        <option value="5">Doctor Four</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="input-field">
-                      <input type="date" />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="input-field">
-                      <select>
-                        <option value="1" selected disabled>
-                          Services Category
-                        </option>
-                        <option value="2">Service One</option>
-                        <option value="3">Service Two</option>
-                        <option value="4">Service Three</option>
-                        <option value="5">Service Four</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="input-field">
-                      <button type="submit" className="template-btn">
-                        Make an Appointment <i className="far fa-plus"></i>
-                      </button>
-                    </div>
-                  </div>
+          <div className="container container-1500">
+            <div className="appointment-form-two style-two">
+              <div
+                className="appointment-image"
+                style={{
+                  backgroundImage: "url(assets/img/appointment/03.jpg)",
+                }}
+              ></div>
+              <div className="form-wrap">
+                <div className="section-heading mb-50">
+                  <span className="tagline">Make an Appointment</span>
+                  <h2 className="title">
+                    Fill-up The From to Get Our Medical Services{" "}
+                  </h2>
                 </div>
-              </form>
+                <form onSubmit={(e) => e.preventDefault()} action="#">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="input-field">
+                        <input type="text" placeholder="Your Full Name" />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-field">
+                        <input type="email" placeholder="Email Address" />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-field">
+                        <select>
+                          <option value="1" selected disabled>
+                            Choose Doctors
+                          </option>
+                          <option value="2">Doctor One</option>
+                          <option value="3">Doctor Two</option>
+                          <option value="4">Doctor Three</option>
+                          <option value="5">Doctor Four</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-field">
+                        <input type="date" />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-field">
+                        <select>
+                          <option value="1" selected disabled>
+                            Services Category
+                          </option>
+                          <option value="2">Service One</option>
+                          <option value="3">Service Two</option>
+                          <option value="4">Service Three</option>
+                          <option value="5">Service Four</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-field">
+                        <button type="submit" className="template-btn">
+                          Make an Appointment <i className="far fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
         {/*====== Appointment Section End ======*/}
         {/*====== Testimonials Section Start ======*/}
         <section className="testimonial-section bg-color-grey section-have-half-bg">
@@ -838,9 +1037,7 @@ const Index = () => {
                 <div className="help-text-wrapper">
                   <div className="section-heading mb-20">
                     <span className="tagline">How Can We Help</span>
-                    <h2 className="title">
-                    Optimize Performance
-                    </h2>
+                    <h2 className="title">Optimize Performance</h2>
                   </div>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus error voluptatem
@@ -867,8 +1064,8 @@ const Index = () => {
               </div>
               <div className="col-lg-6">
                 <div className="help-img text-center text-lg-right mt-md-50">
-                  <img
-                    src="assets/img/section-img/help-section-img.jpg"
+                  <Image width="470" height="670"
+                    src="/assets/img/section-img/help-section-img.jpg"
                     alt="Image"
                   />
                 </div>
@@ -882,7 +1079,9 @@ const Index = () => {
           <div className="container">
             <div className="section-heading heading-white text-center mb-50">
               <span className="span tagline">Our Trusted Partners</span>
-              <h2 className="title">Building Trust and Success through Trusted Partnerships</h2>
+              <h2 className="title">
+                Building Trust and Success through Trusted Partnerships
+              </h2>
             </div>
             <div className="partner-logo-grid grid-border-white">
               <div className="single-partner">
